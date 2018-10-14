@@ -453,7 +453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &247194338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_AssetsPPU: 128
   m_RefResolutionX: 400
   m_RefResolutionY: 300
-  m_UpscaleRT: 1
+  m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 1
   m_CropFrameY: 1
@@ -3151,9 +3151,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 688a446d32f518140967208b626a2be8, type: 2}
   - {fileID: 2100000, guid: 688a446d32f518140967208b626a2be8, type: 2}
   fieldScrollSpeeds:
-  - 20
-  - 20
-  - 20
+  - 23
+  - 23
+  - 23
   - 30
   - 30
   planeRenderer: {fileID: 1176013052}
