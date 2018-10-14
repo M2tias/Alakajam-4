@@ -6,6 +6,9 @@ TextureImporter:
     21300002: random_1
     21300004: random_2
     21300006: random_3
+    21300008: random_4
+    21300010: random_5
+    21300012: random_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -113,7 +116,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad69b8c18b1c5a64794f99eabd15c63a
+      spriteID: 481127b3cfdec36498bcb7fa46129a75
       vertices: []
       indices: 
       edges: []
@@ -133,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90fcb98fc60afef4da6c257dd9eced8c
+      spriteID: 9a58a348f7405fb429dc87a6ceee0989
       vertices: []
       indices: 
       edges: []
@@ -153,7 +156,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d098e729fd9312439e9e2498280abd6
+      spriteID: 93c2cfa51d14f36458e23dbad74a289c
       vertices: []
       indices: 
       edges: []
@@ -173,7 +176,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cacdbc5cf55a01246b34559e06e9e1ff
+      spriteID: 560f40e5a81e4aa4c8b4d0a4522ef5b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: random_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f930fb5e45c2746bcf6a2c6682623f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: random_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b539fd9513f1304abaeae89b943a8f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: random_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dfec8acaf640b4c8e1e01faf3b091e
       vertices: []
       indices: 
       edges: []

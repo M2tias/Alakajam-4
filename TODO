@@ -1,0 +1,38 @@
+
+Todo:
+  ☐ LevelManager
+    ✔ Load levels from prefabs @done(18-10-14 14:28)
+    ☐ Restart a level at death?
+    ✔ Trigger level end @done(18-10-14 14:28)
+    ✔ Reset necessary values at the beginning of a level @done(18-10-14 14:28)
+  ☐ Levels
+    ☐ Sky level (introduction)
+      ✔ Sky texture @done(18-10-14 11:42)
+      ✔ More obstacles? @done(18-10-14 11:42)
+      ✘ Even more obstacles? @cancelled(18-10-14 15:18)
+    ☐ Forest levels?
+      ☐ Another tree?
+      ☐ Fix the current tree
+    ☐ Hell?
+      ☐ Hell texture
+      ☐ Obstacles for hell
+      ☐ Modify angel statue into an imp statue
+  ☐ More Enemies
+    ☐ ????
+  ☐ Work on game mechanics
+    ☐ Better shooting direction(?)
+    ☐ Better touch
+    ☐ "Destroy" bullets should shoot with lower frequency
+  ☐ UI
+    ☐ Level start
+    ☐ Level end
+    ☐ Died
+    ☐ The end
+    ☐ Esc to quit thing
+    ☐ Score?
+  ☐ Menu
+    ✔ Start @done(18-10-14 14:29)
+    ✔ How to play? @done(18-10-14 14:29)
+    ✔ Exit @done(18-10-14 14:29)
+    ☐ Endless menu?
+  

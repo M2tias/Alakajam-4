@@ -5,6 +5,10 @@ TextureImporter:
     21300000: Obstacles_0
     21300002: Obstacles_1
     21300004: Obstacles_2
+    21300006: Obstacles_3
+    21300008: Obstacles_4
+    21300010: Obstacles_5
+    21300012: Obstacles_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -112,7 +116,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed4605797ff3603478f172bbdcdf9d04
+      spriteID: e8dda4f3b28fdef49ad6892f368573fc
       vertices: []
       indices: 
       edges: []
@@ -132,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0722f1ccddd464140a9d62323799215f
+      spriteID: 53f2994441eb1294ca1e03f5cdb27351
       vertices: []
       indices: 
       edges: []
@@ -152,7 +156,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c344e607957c54c92b22de60552513
+      spriteID: e856d974505f4a14ea7984a109503b61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13de2ea7edb3d6c46a3e0070bad34c7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9908972a0a4724f8a91fed210452e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbd5afd49878bc4eae4abcdaddf7528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818c120d83e39a14298cf3ac4b368ce5
       vertices: []
       indices: 
       edges: []
