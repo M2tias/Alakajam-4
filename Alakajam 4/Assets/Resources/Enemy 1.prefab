@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 114310270531964878}
   - component: {fileID: 65339463860762912}
   - component: {fileID: 54784465987365958}
-  - component: {fileID: 82402585745150144}
+  - component: {fileID: 82616630922751598}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.4, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &82402585745150144
+--- !u!82 &82616630922751598
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84de1748a25b3da45a01c7f1366349db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: {fileID: 11400000, guid: dbac32a48987296409bffb546638e018, type: 2}
+  scrollSpeed: {fileID: 11400000, guid: b407b0c322c68df43bad2a96ad86945d, type: 2}
   enemyBullet: {fileID: 114413937728226252, guid: eedb80fd8f1fbef40bf41de07b4c3613,
     type: 2}
   shootFrequency: {fileID: 11400000, guid: bac38b6dd2c8429439443935698c3f8a, type: 2}

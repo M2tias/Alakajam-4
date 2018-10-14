@@ -1,38 +1,38 @@
 
 Todo:
-  ☐ LevelManager
+  ✔ LevelManager @done(18-10-14 21:00)
     ✔ Load levels from prefabs @done(18-10-14 14:28)
-    ☐ Restart a level at death?
+    ✔ Restart a level at death? @done(18-10-14 15:22)
     ✔ Trigger level end @done(18-10-14 14:28)
     ✔ Reset necessary values at the beginning of a level @done(18-10-14 14:28)
-  ☐ Levels
-    ☐ Sky level (introduction)
+  ✔ Levels @done(18-10-14 21:00)
+    ✔ Sky level (introduction) @done(18-10-14 15:22)
       ✔ Sky texture @done(18-10-14 11:42)
       ✔ More obstacles? @done(18-10-14 11:42)
       ✘ Even more obstacles? @cancelled(18-10-14 15:18)
-    ☐ Forest levels?
-      ☐ Another tree?
-      ☐ Fix the current tree
-    ☐ Hell?
-      ☐ Hell texture
-      ☐ Obstacles for hell
-      ☐ Modify angel statue into an imp statue
-  ☐ More Enemies
-    ☐ ????
-  ☐ Work on game mechanics
-    ☐ Better shooting direction(?)
-    ☐ Better touch
-    ☐ "Destroy" bullets should shoot with lower frequency
-  ☐ UI
-    ☐ Level start
-    ☐ Level end
-    ☐ Died
-    ☐ The end
-    ☐ Esc to quit thing
-    ☐ Score?
-  ☐ Menu
+    ✔ Forest levels? @done(18-10-14 21:00)
+      ✘ Another tree? @cancelled(18-10-14 21:00)
+      ✔ Fix the current tree @done(18-10-14 15:36)
+    ✔ Hell? @done(18-10-14 21:00)
+      ✔ Hell texture @done(18-10-14 15:54)
+      ✔ Obstacles for hell @done(18-10-14 21:00)
+      ✘ Modify angel statue into an imp statue @cancelled(18-10-14 21:00)
+  ✘ More Enemies @cancelled(18-10-14 21:00)
+    ✘ ???? @cancelled(18-10-14 21:00)
+  ✘ Work on game mechanics @cancelled(18-10-14 21:00)
+    ✘ Better shooting direction(?) @cancelled(18-10-14 21:00)
+    ✘ Better touch @cancelled(18-10-14 21:00)
+    ✘ "Destroy" bullets should shoot with lower frequency @cancelled(18-10-14 21:00)
+  ✔ UI @done(18-10-14 21:00)
+    ✘ Level start @cancelled(18-10-14 15:38)
+    ✔ Level end @done(18-10-14 15:44)
+    ✔ Died @done(18-10-14 15:38)
+    ✔ The end @done(18-10-14 21:00)
+    ✔ Esc to quit thing @done(18-10-14 16:13)
+    ✘ Score? @cancelled(18-10-14 21:00)
+  ✔ Menu @done(18-10-14 21:00)
     ✔ Start @done(18-10-14 14:29)
     ✔ How to play? @done(18-10-14 14:29)
     ✔ Exit @done(18-10-14 14:29)
-    ☐ Endless menu?
-  
+    ✘ Endless menu? @cancelled(18-10-14 21:00)
+  ✔ FieldPlane has method to set scroll speed USE IT @done(18-10-14 21:00)

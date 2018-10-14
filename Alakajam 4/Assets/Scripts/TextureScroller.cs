@@ -10,6 +10,7 @@ public class TextureScroller : MonoBehaviour {
     private Renderer _renderer;
     private float maxScroll = 0.25f;
     private float currentScroll = 0f;
+    [SerializeField]
     private float scrollSpeed = 20f;
 
 	// Use this for initialization
@@ -28,4 +29,9 @@ public class TextureScroller : MonoBehaviour {
         _renderer.material.SetTextureOffset("_MainTex", new Vector2(0, currentScroll)); //mainTextureOffset = new Vector2(0, currentScroll);
         //scrollSpeed *= 1.01f; //lol
 	}
+
+    public void SetScrollSpeed(float speed)
+    {
+        scrollSpeed = speed;
+    }
 }

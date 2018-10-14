@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     [SerializeField]
     List<GameObject> levelPrefabs = new List<GameObject>();
@@ -40,6 +41,10 @@ public class GameManager : MonoBehaviour {
     private Text GameOver;
     [SerializeField]
     private Text YouAreDead;
+    [SerializeField]
+    private Text Quit;
+    [SerializeField]
+    private GameObject EndPanel;
 
     //this is stupid duct tape code
     [SerializeField]
@@ -49,17 +54,30 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private List<Material> levelMaterials;
     [SerializeField]
+    private List<float> fieldScrollSpeeds;
+    [SerializeField]
     private MeshRenderer planeRenderer;
+    [SerializeField]
+    private TextureScroller fieldScroller;
+    [SerializeField]
+    private Material hellSkyBox;
+    private Material defaultSkyBox;
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         inMenu.Value = true;
         isDead.Value = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        defaultSkyBox = RenderSettings.skybox;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (inMenu.Value)
         {
             Menu.SetActive(true);
@@ -80,7 +98,7 @@ public class GameManager : MonoBehaviour {
             {
                 if (inputY < 0) newGameSelected = false;
 
-                if (Input.GetButton("Fire1"))
+                if (Input.GetButtonDown("Fire1"))
                 {
                     inMenu.Value = false;
                 }
@@ -92,7 +110,7 @@ public class GameManager : MonoBehaviour {
             {
                 if (inputY > 0) newGameSelected = true;
 
-                if (Input.GetButton("Fire1"))
+                if (Input.GetButtonDown("Fire1"))
                 {
                     Application.Quit();
                 }
@@ -101,12 +119,19 @@ public class GameManager : MonoBehaviour {
                 ExitPointer.enabled = true;
             }
         }
+        else if (EndPanel.activeInHierarchy) //lol
+        {
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Cancel"))
+            {
+                inMenu.Value = true;
+                EndPanel.SetActive(false);
+            }
+        }
         else
         {
             Menu.SetActive(false);
             if (currentLevel == null)
             {
-                Debug.Log("First level!");
                 levelFinished.Value = false;
                 GameObject nextLevelPrefab = levelPrefabs[currentLevelNum];
                 GameObject nextLevel = Instantiate(nextLevelPrefab);
@@ -114,40 +139,95 @@ public class GameManager : MonoBehaviour {
                 nextLevel.SetActive(true);
                 Level.text = "Level 1";
                 planeRenderer.material = levelMaterials[currentLevelNum];
+                fieldScroller.SetScrollSpeed(fieldScrollSpeeds[currentLevelNum]);
             }
 
             if (levelFinished.Value)
             {
-                Debug.Log("Next level!");
-                currentLevelNum++;
+                player.gameObject.SetActive(false);
+                LevelFinished.gameObject.SetActive(true);
+                StatusPanel.gameObject.SetActive(true);
                 levelFinished.Value = false;
-                GameObject nextLevelPrefab = levelPrefabs[currentLevelNum];
-                currentLevel.SetActive(false);
-                Destroy(currentLevel);
-                GameObject nextLevel = Instantiate(nextLevelPrefab);
-                currentLevel = nextLevel;
-                nextLevel.SetActive(true);
-                Level.text = "Level "+(currentLevelNum+1);
-                planeRenderer.material = levelMaterials[currentLevelNum];
 
-                health.CurrentHealth = health.MaxHealth;
-                player.transform.localPosition = playerPosition.Default;
-                Hearts.ForEach(x => x.gameObject.SetActive(true));
+                if(currentLevelNum == levelPrefabs.Count-2)
+                {
+                    RenderSettings.skybox = hellSkyBox;
+                }
+                else
+                {
+                    RenderSettings.skybox = defaultSkyBox;
+                }
+
+                if (currentLevelNum < levelPrefabs.Count-1)
+                {
+                    StartCoroutine("waitAndLoadNewLevel");
+                }
+                else
+                {
+                    EndPanel.gameObject.SetActive(true);
+                }
             }
 
-            if(isDead.Value)
+            if (isDead.Value)
             {
                 player.gameObject.SetActive(false);
                 YouAreDead.gameObject.SetActive(true);
                 StatusPanel.gameObject.SetActive(true);
                 StartCoroutine("waitAndResurrect");
+                levelFinished.Value = false;
+                isDead.Value = false;
+            }
+
+            if (Input.GetButtonDown("Cancel") && !Quit.gameObject.activeInHierarchy)
+            {
+                StatusPanel.gameObject.SetActive(true);
+                Quit.gameObject.SetActive(true);
+                StartCoroutine("waitAndHideQuit");
+            }
+            else if (Input.GetButtonDown("Cancel") && Quit.gameObject.activeInHierarchy)
+            {
+                StatusPanel.gameObject.SetActive(false);
+                Quit.gameObject.SetActive(false);
+                inMenu.Value = true;
             }
         }
-	}
+    }
+
+    IEnumerator waitAndHideQuit()
+    {
+        yield return new WaitForSeconds(1f);
+        StatusPanel.gameObject.SetActive(false);
+        Quit.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0);
+    }
+
+    IEnumerator waitAndLoadNewLevel()
+    {
+        yield return new WaitForSeconds(2f);
+        currentLevelNum++;
+        levelFinished.Value = false;
+        GameObject nextLevelPrefab = levelPrefabs[currentLevelNum];
+        currentLevel.SetActive(false);
+        Destroy(currentLevel);
+        GameObject nextLevel = Instantiate(nextLevelPrefab);
+        currentLevel = nextLevel;
+        nextLevel.SetActive(true);
+        Level.text = "Level " + (currentLevelNum + 1);
+        planeRenderer.material = levelMaterials[currentLevelNum];
+        fieldScroller.SetScrollSpeed(fieldScrollSpeeds[currentLevelNum]);
+        player.gameObject.SetActive(true);
+        LevelFinished.gameObject.SetActive(false);
+        StatusPanel.gameObject.SetActive(false);
+
+        health.CurrentHealth = health.MaxHealth;
+        player.transform.localPosition = playerPosition.Default;
+        Hearts.ForEach(x => x.gameObject.SetActive(true));
+        yield return new WaitForSeconds(0);
+    }
 
     IEnumerator waitAndResurrect()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
 
         //not like this...
         levelFinished.Value = false;
@@ -159,6 +239,7 @@ public class GameManager : MonoBehaviour {
         nextLevel.SetActive(true);
         Level.text = "Level " + (currentLevelNum + 1);
         planeRenderer.material = levelMaterials[currentLevelNum];
+        fieldScroller.SetScrollSpeed(fieldScrollSpeeds[currentLevelNum]);
         player.gameObject.SetActive(true);
         YouAreDead.gameObject.SetActive(false);
         StatusPanel.gameObject.SetActive(false);

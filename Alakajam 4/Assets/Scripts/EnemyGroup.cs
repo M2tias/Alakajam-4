@@ -24,8 +24,21 @@ public class EnemyGroup : MonoBehaviour
         }
         else
         {
+            if(enemies.Count > 0)
+            {
+                enemies[0].CanShoot(true);
+            }
+
+            for(var i = 0; i < enemies.Count; i++)
+            {
+                if(enemies[i] == null)
+                {
+                    enemies.RemoveAt(i);
+                }
+            }
             for (var i = 1; i < enemies.Count; i++)
             {
+                if(enemies[i])
                 enemies[i].CanShoot(false);
             }
         }

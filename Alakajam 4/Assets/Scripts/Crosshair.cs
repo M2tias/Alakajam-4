@@ -27,7 +27,6 @@ public class Crosshair : MonoBehaviour {
         {
             transform.position = new Vector3(origo.x+newPos.x, origo.y+newPos.y, transform.position.z);
         }*/
-        //Debug.Log(dir.magnitude + ", " + newPos);
     }
 
     public void changePos(float X, float Y)

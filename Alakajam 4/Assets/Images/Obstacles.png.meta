@@ -9,6 +9,11 @@ TextureImporter:
     21300008: Obstacles_4
     21300010: Obstacles_5
     21300012: Obstacles_6
+    21300014: Obstacles_7
+    21300016: Obstacles_8
+    21300018: Obstacles_9
+    21300020: Obstacles_10
+    21300022: Obstacles_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -116,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8dda4f3b28fdef49ad6892f368573fc
+      spriteID: 6aa00afb3ae593b4e9cc069b08b4afa8
       vertices: []
       indices: 
       edges: []
@@ -136,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53f2994441eb1294ca1e03f5cdb27351
+      spriteID: 61ef775cb95677a41984971d8128a93c
       vertices: []
       indices: 
       edges: []
@@ -156,7 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e856d974505f4a14ea7984a109503b61
+      spriteID: 6e05e561da1caaf448eb3e6bfcb9e3e0
       vertices: []
       indices: 
       edges: []
@@ -176,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13de2ea7edb3d6c46a3e0070bad34c7d
+      spriteID: d0bbcb7d4ccb95b429317f1a2fdbda4b
       vertices: []
       indices: 
       edges: []
@@ -196,7 +201,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a9908972a0a4724f8a91fed210452e2
+      spriteID: 0b0fdca5638206d4c98998a3735ff0b2
       vertices: []
       indices: 
       edges: []
@@ -216,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fbd5afd49878bc4eae4abcdaddf7528
+      spriteID: ac51e2a417a51134d9c0615080d1fb38
       vertices: []
       indices: 
       edges: []
@@ -236,7 +241,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 818c120d83e39a14298cf3ac4b368ce5
+      spriteID: 971fda5a68d21664baaf39a8a17e46d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713694dc2629a214ab2f94e6fa924a6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e89ad0cf35ad14a97eed06a92307c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd54ffc5b4b7c842905167037b0a1a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116ba56ca79e75448b98a687bdabb1e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355cec7c3016f0f4b9bec2ac16ec9cfb
       vertices: []
       indices: 
       edges: []
